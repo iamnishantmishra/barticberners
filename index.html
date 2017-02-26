@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- For mobiles -->
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- For font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style1.css"> <!-- Gem style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script src="js/main.js"></script> <!-- Gem jQuery -->
+
+	<link rel="icon" href="images/favicon.ico">
+
+	<title>BarticBerners- We do Web</title>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+    <nav class="navbar navbar-default navbar-fixed-top mainnav">
+    	<div class="container">
+    		<div class="navbar-header">
+    			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    			</button>
+    			<a class="navbar-brand" href="#">_BarticBerners</a>
+    		</div>
+    		<div class="collapse navbar-collapse" id="myNavbar">
+    			<ul class="nav navbar-nav navbar-right">
+    				<li><a href="#about">ABOUT</a></li>
+    				<li><a href="#services">SERVICES</a></li>
+    				<li><a href="#contact">CONTACT</a></li>
+    				<li><a class="cd-signin" href="#0">LOGIN</a></li>
+    				<li><a class="cd-signup" href="#0">SIGN UP</a></li>
+    			</ul>
+    		</div>
+    	</div>
+    </nav>
+
+
+
+    <!-- Modal Window (For login/signup) -->
+    <div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+			<ul class="cd-switcher">
+				<li><a href="#0">Sign in</a></li>
+				<li><a href="#0">New account</a></li>
+			</ul>
+
+			<div id="cd-login"> <!-- log in form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signin-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signin-password">Password</label>
+						<input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="remember-me" checked>
+						<label for="remember-me">Remember me</label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width" type="submit" value="Login">
+					</p>
+				</form>
+				
+				<p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-login -->
+
+			<div id="cd-signup"> <!-- sign up form -->
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-username" for="signup-username">Username</label>
+						<input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="signup-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<label class="image-replace cd-password" for="signup-password">Password</label>
+						<input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+						<a href="#0" class="hide-password">Hide</a>
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input type="checkbox" id="accept-terms">
+						<label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Create account">
+					</p>
+				</form>
+
+				<!-- <a href="#0" class="cd-close-form">Close</a> -->
+			</div> <!-- cd-signup -->
+
+			<div id="cd-reset-password"> <!-- reset password form -->
+				<p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+				<form class="cd-form">
+					<p class="fieldset">
+						<label class="image-replace cd-email" for="reset-email">E-mail</label>
+						<input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+						<span class="cd-error-message">Error message here!</span>
+					</p>
+
+					<p class="fieldset">
+						<input class="full-width has-padding" type="submit" value="Reset password">
+					</p>
+				</form>
+
+				<p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+			</div> <!-- cd-reset-password -->
+			<a href="#0" class="cd-close-form">Close</a>
+		</div> <!-- cd-user-modal-container -->
+	</div> <!-- cd-user-modal -->
+
+
+    
+
+    <!-- Container (About section) --> 
+	<div class="jumbotron text-center">
+		 <h2>You dream. We build.</h2>
+		  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+		    <!-- Indicators -->
+		    <ol class="carousel-indicators">
+		      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		      <li data-target="#myCarousel" data-slide-to="1"></li>
+		      <li data-target="#myCarousel" data-slide-to="2"></li>
+		    </ol>
+
+		    <!-- Wrapper for slides -->
+		    <div class="carousel-inner" role="listbox">
+		      <div class="item active">
+		        <h4>"Design creates culture. Culture shapes values. Values determine the future."<br><span style="font-style:normal;">We help you to get everything right from the starting...</span></h4>
+		      </div>
+		      <div class="item">
+		        <h4>"One word... BELIEVE!!"<br><span style="font-style:normal;"><b>Rest Assured...</b></span></h4>
+		      </div>
+		      <div class="item">
+		        <h4>"At <b><i>BarticBerners</i></b>, 100% satisfaction is guranteed!"<br><span style="font-style:normal;">That's a promise.</span></h4>
+		      </div>
+		    </div>
+
+		    <!-- Left and right controls -->
+		    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		      <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		      <span class="sr-only">Next</span>
+		    </a>
+		  </div>
+	</div>
+
+    <!-- Container (About Us) -->
+    <div id="about" class="container-fluid text-center">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About us</h2><br>
+                <h4><i>Around here, however, we don't look backwards for very long. We <b>keep moving forward</b>, opening up new doors and doing new things, because we are curious... and curiosity keeps leading us down new paths.<br> <b>-Walt Disney</b></i></h4><br>
+                <p>We are a growing web development and digital advertising company based in the pink city of Jaipur, India. We provide innovative web solutions and services to deliver best in class experience, which is also very affordable.</p>
+                <br><button class="btn btn-default btn-lg">Get in Touch</button>
+            </div>
+            <div class="col-sm-4">
+                <img src="images/about_us.png">
+            </div>
+        </div>
+    </div>
+
+	<div class="container-fluid bg-color">
+	  <div class="row">
+	    <div class="col-sm-4">
+	      <img src="images/mission3.png">
+	    </div>
+	    <div class="col-sm-8">
+	      <h2>Our Values</h2><br>
+	      <h4><strong>MISSION:</strong> Our mission is simple: to make you and your company grow. We work around your business. We strive to make technology integrate seamlessly with your business so your business can grow. As your technology partner, when your business grows ours will grow with you, therefore, we will work hand in hand with you to support your growth.</h4><br>
+	      <p><strong>VISION:</strong> We may not be the Master Builders, we may not have a lot of experience, fighting or leading or coming up with plans or having ideas in general. Infact, we are not all that smart and we are not what you call a creative type plus generally unskilled, also scared and cowardly. We know what you're thinking, we are the least qualified people in the world and you are right! But, it's okay, because we have the courage to be what we want to be, the No. 1 Software Company, and to do whatever it takes!</p>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Container (Services section) -->
+	<div id="services" class="container-fluid text-center">
+		<h2>Our Services</h2>
+		<br>
+		<br>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-credit-card logo-small"></span>
+				<h4>Web</h4>
+				<p>
+					HTML &amp CSS Websites <br>
+					Web Applications Development <br><br>
+				</p>
+			</div>
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-send logo-small"></span>
+				<h4>Online Advertising</h4>
+				<p>
+					Search Engine Marketing <br>
+					Social Media Marketing <br>
+					Banner Advertising <br><br>
+				</p>
+			</div>
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-phone logo-small"></span>
+				<h4>Mobile</h4>
+				<p>
+					Mobile Applications <br>
+					Social Media Applications <br><br>
+				</p>
+			</div>
+		</div>
+		<div class="row slideanim">
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-scissors logo-small"></span>
+				<h4>Creative Designs</h4>
+				<p>
+				    HTML &amp full flash websites <br>
+				    Logo and brand identity <br>
+				    E-brochures
+				</p>
+			</div>
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-wrench logo-small"></span>
+				<h4>Support</h4>
+				<p>
+					Full post-project support <br>
+					Support to startups
+				</p>
+			</div>
+			<div class="col-sm-4">
+			    <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+				<h4>Satisfaction</h4>
+				<p>
+					100% satisfaction guranteed
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Container (Contact Section) -->
+    
+    <div id="contact" class="container-fluid bg-color">
+    	<header class="section-header underline">
+    		<h1 class="headline super hairline">Got an idea?</h1>
+    		<p>BarticBerners is made to suit you.</p>
+    	</header>
+    	<div class="text-center"></div>
+    	<div class="formouter_03">
+    		<div class="row">
+    			<div class="col-md-6 col-sm-6">
+    				<form class="contact-form" name="contact_form" action="form_process.php" method="post"> <!-- Added php file -->
+    					<div class="form-group form-icon-group">
+    						<input class="form-control" id="name" type="text" name="name" placeholder="Your name *">
+    						<i class="fa fa-user" style="color: #2c3e50"></i>
+    					</div>
+    					<div class="form-group form-icon-group">
+    						<input class="form-control" id="email" type="text" name="email" placeholder="Your email *">
+    						<i class="fa fa-envelope" style="color: #2c3e50"></i>
+    						<div class="hide-error-msg" id="email-error" style="color: #222;">Please enter your correct e-mail id.</div>
+    					</div>
+    					<div class="form-group form-icon-group">
+    						<textarea class="form-control" id="message" name="message" placeholder="Your message *" rows="7"></textarea>
+    						<i class="fa fa-pencil" style="color: #2c3e50"></i>
+    						<div class="hide-error-msg" id="msg-error" style="color: #222;">Please enter your message.</div>
+    					</div>
+    					<div class="captchacodemaindiv" style="position: relative;">
+    						<div class="captchatextboxdiv">
+    							<input type="text" id="captcha" name="captcha" class="captchatextbox" placeholder="Enter the code here...">
+    						</div>
+    						<div class="captcharefreshimgdiv">
+    							<img src="images/refresh.png" class="captcharefreshimage">
+    						</div>
+    						<div class="captchaimagediv">
+    							<img src="images/regenerateCaptcha.jpg" id="captchaimg">
+    						</div>
+    						<div class="hide-error-msg errormagnew" id="captcha-error" style="color: #222;">Please select the captcha.</div>
+    						<div class="form-group text-center sendmailvia">
+    							<button class="btn btn-primary btn-icon btn-icon-right" type="submit" name="submit">
+    								Send email
+    							</button>
+    						</div>
+    						<div class="hide-error-msg errormagnew" id="captcha-error" style="color: #222;">Please select the captcha.</div>
+    					</div>
+    				</form>
+    				<div id="message"></div>
+    			</div>
+    			<div class="col-md-6 col-sm-6">
+    				<p class="font26" style="margin: 0px 0 30px 60px; color: #222;">
+    					<strong>Email us at:</strong>
+    					<a href="mailto:info@barticberners" style="text-decoration: none; color: #222;">info@barticberners.com</a>
+    				</p>
+    				<p class="font26" style="margin: 0px 0 30px 60px; color: #222;">
+    					64, Madhav Nagar,
+    					<br>
+    					Maharani Farm, Jaipur, RJ 302018
+    				</p>
+    				<p class="font26" style="margin: 0 0 0 60px; color: #222;">
+    					<strong>Phone:</strong>
+    					<a href="callto:+91-99828-62954" style="text-decoration: none; color: #222;">+91-99828-62954</a>
+    				</p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+<!-- 
+<div id="contact" class="container-fluid bg-color">
+  <h2 class="text-center">CONTACT</h2>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Jaipur, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9982862954</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> mail@barticberners.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Add Google Maps -->
+<div id="googleMap" style="height:400px;width:100%;"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(26.9124, 75.7873);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, zoomControl:true, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+
+<!-- Footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><i class="fa fa-copyright"></i> Copyright 2017 BarticBerners. All rights reserved.<a href="#" title="BarticBerners Legal">Legal</a>&nbsp|&nbsp Made with HTML5 and CSS3 &nbsp|&nbsp Made on a PC</p>
+</footer>
+
+<!-- Smooth Scrolling (jQuery) -->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+
+// Slide Animation
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+</script>
+
+
+
+</body>
+</html>
